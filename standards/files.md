@@ -48,14 +48,14 @@ Here is an example of an Nx Component Lib.
 * Candidates to elevate to global `libs > common-util`.
 
 ## Naming Conventions
-###Components [PascalCase]
+###C omponents [PascalCase]
  Ex: `Component.js`, `ComponentContext.js`, `ComponentContainer.js`
-###Folder Names [snake-case]
+### Folder Names [snake-case]
 Ex: `components`, `feature-one`, `feature-one-sub-component`
-###Everything Else [barrel.case]
+### Everything Else [barrel.case]
 Ex: `account.service.js`, `getUser.hooks.js`, `userItems.utils.js`
 
-##Questions to Answer
+## Questions to Answer
 * Do Context and Container need their own folder. Could we combine them?
 * Do we want to make some file names consistent? .utils.js vs camelCase.
 * Should we make hooks separate or slide it in to utils?
