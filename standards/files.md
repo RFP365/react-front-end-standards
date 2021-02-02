@@ -48,7 +48,7 @@ Here is an example of an Nx Component Lib.
 * Candidates to elevate to global `libs > common-util`.
 
 ## Naming Conventions
-###C omponents [PascalCase]
+### Components [PascalCase]
  Ex: `Component.js`, `ComponentContext.js`, `ComponentContainer.js`
 ### Folder Names [snake-case]
 Ex: `components`, `feature-one`, `feature-one-sub-component`
