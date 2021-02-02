@@ -1,4 +1,4 @@
-##Service Layer Example
+## Service Layer Example
 `*.service.js` files serve as the interface layer for the api. 
 They should utilize DTO Objects for shape and `*.routing.js` files for common variables.
 

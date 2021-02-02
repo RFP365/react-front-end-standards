@@ -1,4 +1,4 @@
-# React Component Example
+# Simple React Component Example
 
 Below is a simple react component. Notice that it is laid out with higher context up top and lower context below.
 Borrowed from Vue.js, this layout keeps the 'component' at a glance. Complexity should be abstracted to helper methods/components.
