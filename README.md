@@ -10,6 +10,12 @@
 1. [React](/standards/react.md)
 1. [Nx](/standards/nx.md)
 
+## Provided Examples
+1. [General Component](/examples/component.md)
+2. [AppContext](/examples/context.md)
+3. [Custom Hooks](/examples/hook.md)
+4. [API Service Files](/examples/service.md)
+
 ### Mission Statement
 Included are standards that we've reviewed as an organization and agree to adhere with so that we produce quality, maintainable, and consistent code. Always aim to meet the standards, knowing that you may occasionally have to break the rules. Be thoughtful about when you deviate and check with a senior software engineer or a principal software engineer for guidance. Occasionally we may need to revisit or update our standards.
 

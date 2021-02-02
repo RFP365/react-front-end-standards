@@ -20,7 +20,8 @@ Here is an example of an Nx Component Lib.
     |   ├── firstComponent.service.js   
     ├── utils                           # [object].[type].js
     |   ├── camelCaseComponent.utils.js                
-    |   ├── hookMethod.hooks.js                              
+    |   ├── hookMethod.hooks.js 
+    └── index.js                         # Export file.
 
 
 ##Folders [snake-case]
