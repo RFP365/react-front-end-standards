@@ -29,7 +29,7 @@ const useApp = () => useContext(AppContext);
 const AppProvider = ({children}) => {
     const [product, setProduct] = useState(ProductType.RESPONDING);
     const [isSidenavOpen, setSidenavOpen] = useState(true);
-    
+
     return (
         <AppContext.Provider
             value={{
@@ -45,6 +45,13 @@ const AppProvider = ({children}) => {
 };
 
 export {AppContext, useApp, AppProvider};
+````
+
+Then wrap the component in a Context.Provider
+````javascript
+<AppProvider>
+    <YourComponent/>
+</AppProvider>
 ````
 
 ## Additional Resources

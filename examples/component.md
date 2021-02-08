@@ -80,6 +80,8 @@ export default AuthFailureAlert;
 * useState: Hook used to store component state. (See: [useState Documentation](https://reactjs.org/docs/hooks-state.html))
 * useEffect: Hook used to handle lifecycle changes. (OnSetup, OnChange, onUpdate ect.) (See: [useEffect Documentation](https://reactjs.org/docs/hooks-effect.html))
 ###PropType
+* Is required documentation and helps enforcement by React of incoming prop types.
+* Complicated incoming props should receive `Shape`  Objects
 
 ## Javascript/Functionality
 * 
