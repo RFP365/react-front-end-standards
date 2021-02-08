@@ -54,5 +54,10 @@ Then wrap the component in a Context.Provider
 </AppProvider>
 ````
 
+You can use the hook `useContext` or wrap it within your context to access it.
+````javascript
+const {product, setProduct, isSidenavOpen, setSidenavOpen} = useApp();
+````
+
 ## Additional Resources
 * [Building your own Context](https://reactjs.org/docs/context.html)
