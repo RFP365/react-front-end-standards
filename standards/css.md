@@ -4,67 +4,8 @@
 
 Additional Info: [Emotion Documentation](https://emotion.sh/docs/styled)
 
-## Structure/NamingConventions
-### Components
-- General Naming: Use Descriptive PascalCase Naming(EG: `BigButton`, `TopContent`). 
-- When styling a root component use `Styled{RootComponent}` to avoid naming conflicts.
-- Wrapping ThirdParty Components. Preface with Styled. IE. `Styled{ThirdPartyComponent}`
-
-
-````jsx
-const MainContent = styled.div`
-    color: ${props => props.primary ? 'hotpink' : 'turquoise'};
-`
-````
-
-## SubComponents
-When laying out React components, try to compose in modular terms.
-This will help in styling and often to break patterns for re-use.
-When appropriate, add a post-fix to denote SubClassing of Component Styles.
-
-```jsx
-const MainContentBody = styled.div`
-    //Body Styles
-`
-
-const MainContentTop = styled.div`
-    //Top Styles
-`
-```
-
-## Extensions
-For small Extension, SubClasses, a scss nested class is acceptable.
-For moderate modifiers create a new Component with a postfix modifier.
-1) Using a SCSS Nested Class Modifier
-````jsx
-const BigButton = styled(Button)`
-        //Original Styles
-    &.outlined {
-        //Outlined Specific Styles
-    }`
-````
-
-2) Create new Extended Components
-````jsx
-const BugButtonOutlined = styled(BigButton)`
-    //Include Only Overwritting Styles
-}`
-
-````
-
-## Representing State
-When toggling styles, create an `is` modified state variable.
-Target state by using a nested `&.isVariable` to overwrite styles.
-````jsx
-const BigButton = styled(Button)`
-        //Original Styles
-    &.isOpen {
-        //Toggled State Styles
-    }`
-````
-
-
-### Example
+---
+## Example
 ```jsx
 import styled from '@emotion/styled'
 
@@ -98,6 +39,65 @@ const StyleDrawer = styled(Drawer)`
   }
 }`
 ```
+
+## Structure/NamingConventions
+### Components
+- General Naming: Use Descriptive PascalCase Naming(EG: `BigButton`, `TopContent`). 
+- When styling a root component use `Styled[RootComponent]` to avoid naming conflicts.
+- Wrapping ThirdParty Components. Preface with Styled. IE. `Styled[ThirdPartyComponent]`
+
+
+````jsx
+const MainContent = styled.div`
+    color: ${props => props.primary ? 'hotpink' : 'turquoise'};
+`
+````
+
+### SubComponents
+When laying out React components, try to compose in modular terms.
+This will help in styling and often to break patterns for re-use.
+When appropriate, add a post-fix to denote SubClassing of Component Styles.
+
+```jsx
+const MainContentBody = styled.div`
+    /*Body Styles*/
+`
+
+const MainContentTop = styled.div`
+    //Top Styles
+`
+```
+
+### Extensions
+For small Extension, SubClasses, a scss nested class is acceptable.
+For moderate modifiers create a new Component with a postfix modifier.
+1) Using a SCSS Nested Class Modifier
+````jsx
+const BigButton = styled(Button)`
+        //Original Styles
+    &.outlined {
+        //Outlined Specific Styles
+    }`
+````
+
+2) Create new Extended Components
+````jsx
+const BugButtonOutlined = styled(BigButton)`
+    //Include Only Overwritting Styles
+}`
+
+````
+
+### Representing State
+When toggling styles, create an `is` modified state variable.
+Target state by using a nested `&.isVariable` to overwrite styles.
+````jsx
+const BigButton = styled(Button)`
+        //Original Styles
+    &.isOpen {
+        //Toggled State Styles
+    }`
+````
 
 ## General StyleSheet Guidelines
 Full CSS overview is out of scope of company guidelines. 

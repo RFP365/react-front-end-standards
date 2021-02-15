@@ -1,8 +1,8 @@
 # File &amp; Folder Structure Guidelines
 
-## Folder Structure
-
 Here is an example of an Nx Component Lib.
+
+---
 
     . feature-one
     ├── common                          # [PascalCase].js
@@ -26,7 +26,7 @@ Here is an example of an Nx Component Lib.
     └── index.js                         # Export file.
 
 
-##Folders [snake-case]
+## Folders [snake-case]
 ### common
 * Re-usable common-ui components.
 * Candidates to elevate to global `libs > common-ui`.
