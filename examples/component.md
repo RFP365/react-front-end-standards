@@ -1,8 +1,9 @@
 # Simple React Component Example
 
 Below is a simple react component. Notice that it is laid out with higher context up top and lower context below.
-Borrowed from Vue.js, this layout keeps the 'component' at a glance. Complexity should be abstracted to helper methods/components.
-Styles are abstracted to the very bottom and de-coupled from Logic when possible.
+Borrowed from Vue.js, this layout keeps the 'component' at a glance. 
+Complexity should be abstracted to helper methods/components and lifted out and put under the component.
+Styles are abstracted to the very bottom and de-coupled from logic as much as possible.
 
 ````javascript
 import React from 'react';
@@ -45,7 +46,7 @@ SimpleComponent.propTypes = {
     individualProp: PropTypes.bool.isRequired,
 };
 
-//Javascript helper methods and components
+//Abstracted javascript helper methods and components
 const helperMethod = switchVar => {
     let toReturn = null;
     switch (switchVar) {
@@ -70,27 +71,34 @@ export default AuthFailureAlert;
 ````
 
 ## Imports
-* Ordering. React > Frameworks > Library Imports > Local Imports
+Ordering. React > Frameworks > Library Imports > Local Imports
+
+```javascript
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from '@emotion/styled';
+import Button from '@material-ui/lab/Button';
+
+import { CommonComponent } from '@rfp360-web/common-ui';
+import { ChildComponent } from './child-component/ChildComponent';
+```
 
 
 ## Component
-###JSX [TODO Reference js.md]
-###Guidelines
-###Common Usages
+### JSX ([See JS Guidelines](../standards/js.md))
+### Guidelines
+### Common Usages
 * useState: Hook used to store component state. (See: [useState Documentation](https://reactjs.org/docs/hooks-state.html))
 * useEffect: Hook used to handle lifecycle changes. (OnSetup, OnChange, onUpdate ect.) (See: [useEffect Documentation](https://reactjs.org/docs/hooks-effect.html))
-###PropType
+### PropType
 * Is required documentation and helps enforcement by React of incoming prop types.
 * Complicated incoming props should receive `Shape`  Objects
 
 ## Javascript/Functionality
 * 
 
-## Styling [TODO Reference css.md]
-* 
+## Styling ([See CSS Guidelines](../standards/css.md))
 
-##TODO
-* How to order imports..
 
 
 
