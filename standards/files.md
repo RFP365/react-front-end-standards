@@ -18,7 +18,7 @@ Here is an example of an Nx Component Lib.
     |   ├── MainComponentContainer.js   
     ├── contexts                        # [PascalCase].js   
     |   ├── FeatureContext.js
-    ├── services                        # [object].service.js
+    ├── services                        # [object].services.js
     |   ├── firstComponent.service.js   
     ├── utils                           # [object].[type].js
     |   ├── camelCaseComponent.utils.js                
