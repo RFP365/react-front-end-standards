@@ -1,8 +1,10 @@
 # Hook Example
 
-Hooks are used to expose custom functionality within functional components.
-This is often the correct way to expose `*.service.js` or `*.utils.js` methods.
+Hooks are used to expose custom functionality within functional components. 
+This is often the correct way to expose `*.services.js` or `*.utils.js` methods.
 ---
+
+>`use-storage.hooks.js`
 
 ````jsx
 import {useState} from 'react';

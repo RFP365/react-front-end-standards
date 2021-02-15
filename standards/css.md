@@ -74,9 +74,9 @@ For moderate modifiers create a new Component with a postfix modifier.
 1) Using a SCSS Nested Class Modifier
 ````jsx
 const BigButton = styled(Button)`
-        //Original Styles
+        /* Original Styles */
     &.outlined {
-        //Outlined Specific Styles
+        /* Outlined Specific Styles */
     }`
 ````
 
@@ -90,7 +90,7 @@ const BugButtonOutlined = styled(BigButton)`
 
 ### Representing State
 When toggling styles, create an `is` modified state variable. Such as `isActive`.
-Target state by using a nested `&.active` or snake-case to overwrite styles.
+Target state by using a nested `&.active` or kebab-case to overwrite styles.
 ````jsx
 const BigButton = styled(Button)`
         /* Original Styles */

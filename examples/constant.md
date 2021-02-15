@@ -1,8 +1,9 @@
 # Simple React Constant Example
 
-Below is a simple react constant definition file. Naming convention `[domainObject].constants.js`. Use these to increase cohesion throughout the app and reduce duplication errors. 
+Below is a simple react constant definition file. Naming convention. Use these to increase cohesion throughout the app and reduce duplication errors. 
 
 ---
+> `product-type.constants.js`
 
 ```js
 export const ProductType = Object.freeze({

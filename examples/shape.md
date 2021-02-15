@@ -1,8 +1,9 @@
 # PropType Shape Example
 
-Shape objects are used to document and abstract large, complicated, or commonly used propType sets. Named `[object].propTypeShape.js`
+Shape objects are used to document and abstract large, complicated, or commonly used propType sets.
 
 ---
+> `company.shape.js`
 
 ```jsx
 import PropTypes from 'prop-types';

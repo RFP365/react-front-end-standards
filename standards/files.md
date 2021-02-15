@@ -26,7 +26,7 @@ Here is an example of an Nx Component Lib.
     └── index.js                         # Export file.
 
 
-## Folders [snake-case]
+## Folders [kebab-case]
 ### common
 * Re-usable common-ui components.
 * Candidates to elevate to global `libs > common-ui`.
@@ -55,10 +55,12 @@ Here is an example of an Nx Component Lib.
 ## Naming Conventions
 ### Components [PascalCase]
  Ex: `Component.js`, `ComponentContext.js`, `ComponentContainer.js`
-### Folder Names [snake-case]
+### Stories/Tests [ComponentName.centric.case]
+ Ex: `OverviewMode.spec.js`, `BigButton.stories.js`
+### Folder Names [kebab-case]
 Ex: `components`, `feature-one`, `feature-one-sub-component`
-### Everything Else [barrel.case]
-Ex: `account.service.js`, `getUser.hooks.js`, `userItems.utils.js`
+### Everything Else [domain-area.centric.case]
+Ex: `account.service.js`, `get-user.hooks.js`, `user-items.utils.js`
 
 ## Questions to Answer
 * Do Context and Container need their own folder. Could we combine them?
