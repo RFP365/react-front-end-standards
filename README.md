@@ -2,10 +2,8 @@
 ## Table of Contents
 
 1. [File Structure](/standards/files.md)
-1. [HTML Formatting](/standards/html.md#html-formatting)
-1. [HTML Best Practices](/standards/html.md#html-best-practices)
-1. [CSS Formatting](/standards/css.md#css-formatting)
-1. [CSS Best Practices](/standards/css.md#css-best-practices)
+1. [HTML Guidelines](/standards/html.md)
+1. [CSS Guidelines](/standards/css.md)
 1. [Javascript Best Practices](/standards/js.md)
 1. [React](/standards/react.md)
 1. [Nx](/standards/nx.md)

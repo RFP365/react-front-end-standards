@@ -28,19 +28,19 @@ Here is an example of an Nx Component Lib.
 ### common
 * Re-usable common-ui components.
 * Candidates to elevate to global `libs > common-ui`.
-### components(TODO LINK TO COMPONENT EXAMPLE File)
+### components (See: [Component Example](../examples/component.md))
 * Components used by the feature.
 * Broken out by feature > sub-components. 
 ### constants
 * Feature specific constants.
 * Candidates to elevate to global `libs > models`.
 ### containers
-* Generally provide a data-retrieval layer to make root components more functional.
+* Generally provide a data-retrieval layer to promote more functional design.
 * [Tutorial on Containers](https://scotch.io/courses/5-essential-react-concepts-to-know-before-learning-redux/presentational-and-container-component-pattern-in-react)
-### contexts
+### contexts (See: [Context Example](../examples/context.md))
 * Context files hold feature state via React Context.
 * [Documentation on Contexts]((https://reactjs.org/docs/context.html))
-### services
+### services (See: [Service Example](../examples/service.md))
 * Service files hold logic related to API calls.
 * Candidates to elevate to global `libs > common-services`.
 ### utils
