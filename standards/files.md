@@ -1,6 +1,6 @@
-# File &amp; Folder Structure
+# File &amp; Folder Structure Guidelines
 
-##Folder Structure
+## Folder Structure
 
 Here is an example of an Nx Component Lib.
 

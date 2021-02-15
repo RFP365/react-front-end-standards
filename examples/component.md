@@ -86,6 +86,14 @@ import { ChildComponent } from './child-component/ChildComponent';
 
 ## Component
 ### JSX 
+
+#### Props
+- Props are typically manually defined `({prop1, prop2})` to provide better propType visibility and enforcement.
+- There are a few cases for destructuring `{[prop1, prop2} = props`, such as hooks.
+
+#### Returns
+- Return JSX in only one location. If your element has a blank or invalid return. Use `null`.
+
 ### Guidelines ([See React Guidelines](../standards/react.md))
 ### Common Usages
 * useState: Hook used to store component state. (See: [useState Documentation](https://reactjs.org/docs/hooks-state.html))

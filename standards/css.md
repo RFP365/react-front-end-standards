@@ -1,7 +1,5 @@
-# React Front End Guidelines
-We currently use Emotion(Styled Components) to style our React Components.
-Those are typically defined within a component. 
-A file with too many lines, styles, or components is a good candidate for refactor.
+# StyleSheet Guidelines
+> We currently use Emotion(Styled Components) to style our React Components. Those are typically laid out within the javascript and not externalized. A file with too many lines, styles, or components is a good candidate for refactor.
 
 Additional Info: [Emotion Documentation](https://emotion.sh/docs/styled)
 
@@ -141,16 +139,17 @@ Note: (Not as relevant with `Styled Components`)
 <div id="CSS-Selector"></div>
 ````
 
-### Common Variables
-Always reference global variables for commonly used values.
-Failure to re-use will result in error and an ever expanding list of one-offs.
-- Examples include `colors`, `fonts`, `spacing`.
-
 ### Property Order
 CSS properties should be grouped by commonality (display, then box-model, then positioning, then background/color, then typography, then misc/etc).
 Not strongly enforced, but a good consideration.
 
-### Examples Using our Themes
+### Common Variables
+Always reference global variables for commonly used values.
+Failure to re-use will result in error and an ever expanding list of one-offs.
+Examples include `colors`, `fonts`, `spacing`.
+
+### Using Material-UI Themes
+If your component has been wrapped at a high-level with a ThemeProvider. Use the theme for common variables.
 ```
   background-color: ${({theme}) => theme.palette.gray.light};
   color: ${({ theme }) => theme.palette.primary.main};
