@@ -1,6 +1,4 @@
 # React Front End Guidelines
-
-## Overview
 We currently use Emotion(Styled Components) to style our React Components.
 Those are typically defined within a component. 
 A file with too many lines, styles, or components is a good candidate for refactor.
@@ -115,6 +113,22 @@ For further assistance, the web has plenty of [Documentation](https://developer.
 1) Use `FlexBox` or a modern CSS Layout Feature. (See: [Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/))
 2) Use a CSS Layout Framework such as `BootStrap`.
 
+### Margin/Padding
+Margin is used for spacing between components. Padding is used for spacing within a component.
+Take advantage of the natural document flow when spacing content by trying to use only margin bottom on content elements so they can easily be interchanged while keeping a predictable document flow and avoiding margin collapsing issues.
+Additionally use padding on containers to keep a consistent "edge".
+```javascript
+//Do this.
+const StackableContent = styled.div`
+    margin-bottom:15px;
+`
+// Intead of this.
+const StackableContent = styled.div`
+    margin-top:10px;
+    margin-bottom:5px;
+`
+```
+
 ### References
 Note: (Not as relevant with `Styled Components`)
 - Use `class` whenever possible. It promotes a modular workflow.
@@ -136,17 +150,18 @@ Failure to re-use will result in error and an ever expanding list of one-offs.
 CSS properties should be grouped by commonality (display, then box-model, then positioning, then background/color, then typography, then misc/etc).
 Not strongly enforced, but a good consideration.
 
-### Linting/Prettier
-Thought is typically is given to `Brackets`, `Whitespace`, `semicolons`, `indentation`.
-Due to Linting validation and pre-commit hook cleanup, these are largely obfuscated away.
-
-### Using our Themes
+### Examples Using our Themes
 ```
   background-color: ${({theme}) => theme.palette.gray.light};
   color: ${({ theme }) => theme.palette.primary.main};
   font-size: ${({ theme }) => theme.typography.pxToRem(12)};
   font-weight: ${({ theme }) => theme.typography.fontWeightBold};
 ```
+
+### Linting/Prettier
+Thought is typically is given to `Brackets`, `Whitespace`, `semicolons`, `indentation`.
+Due to Linting validation and pre-commit hook cleanup, these are largely obfuscated away.
+
 
 ## Questions to Answer
 Should we Have Separate Conventions for Extension vs. SubComponent.
