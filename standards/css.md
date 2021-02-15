@@ -11,7 +11,7 @@ Additional Info: [Emotion Documentation](https://emotion.sh/docs/styled)
 - Wrapping ThirdParty Components. Preface with Styled. IE. `Styled{ThirdPartyComponent}`
 
 
-````javascript
+````jsx
 const MainContent = styled.div`
     color: ${props => props.primary ? 'hotpink' : 'turquoise'};
 `
@@ -22,7 +22,7 @@ When laying out React components, try to compose in modular terms.
 This will help in styling and often to break patterns for re-use.
 When appropriate, add a post-fix to denote SubClassing of Component Styles.
 
-```javascript
+```jsx
 const MainContentBody = styled.div`
     //Body Styles
 `
@@ -36,7 +36,7 @@ const MainContentTop = styled.div`
 For small Extension, SubClasses, a scss nested class is acceptable.
 For moderate modifiers create a new Component with a postfix modifier.
 1) Using a SCSS Nested Class Modifier
-````javascript
+````jsx
 const BigButton = styled(Button)`
         //Original Styles
     &.outlined {
@@ -45,7 +45,7 @@ const BigButton = styled(Button)`
 ````
 
 2) Create new Extended Components
-````javascript
+````jsx
 const BugButtonOutlined = styled(BigButton)`
     //Include Only Overwritting Styles
 }`
@@ -55,7 +55,7 @@ const BugButtonOutlined = styled(BigButton)`
 ## Representing State
 When toggling styles, create an `is` modified state variable.
 Target state by using a nested `&.isVariable` to overwrite styles.
-````javascript
+````jsx
 const BigButton = styled(Button)`
         //Original Styles
     &.isOpen {
@@ -65,7 +65,7 @@ const BigButton = styled(Button)`
 
 
 ### Example
-```javascript
+```jsx
 import styled from '@emotion/styled'
 
 render(

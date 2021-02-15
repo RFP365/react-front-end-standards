@@ -3,7 +3,7 @@
 Hooks are used to expose custom functionality within functional components.
 This is often the correct way to expose `*.service.js` or `*.utils.js` methods.
 
-````javascript
+````jsx
 import {useState} from 'react';
 
 import {storeItem, retrieveItem, evictItem} from './storage.service';

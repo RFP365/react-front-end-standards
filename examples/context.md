@@ -3,7 +3,7 @@
 Context is primarily used when some data needs to be accessible by many components at different nesting levels. 
 Apply it sparingly because it makes component re-use more difficult.
 
-````javascript
+````jsx
 import React, {createContext, useContext, useState, useEffect, useRef} from 'react';
 
 import {ProductType} from '@rfp360-web/models';
@@ -48,14 +48,14 @@ export {AppContext, useApp, AppProvider};
 ````
 
 Then wrap the component in a Context.Provider
-````javascript
+````jsx
 <AppProvider>
     <YourComponent/>
 </AppProvider>
 ````
 
 You can use the hook `useContext` or wrap it within your context to access it.
-````javascript
+````jsx
 const {product, setProduct, isSidenavOpen, setSidenavOpen} = useApp();
 ````
 

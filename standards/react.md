@@ -4,12 +4,11 @@
 
 This style guide is mostly based on the standards that are currently prevalent in JavaScript, although some conventions (i.e async/await or static class fields) may still be included or prohibited on a case-by-case basis. Currently, anything prior to stage 3 is not included nor recommended in this guide.
 
-Note: This guide is a jumping off point but certain parts of it are currently outdated.
+Note: This guide is meant to be a jumping off point. It barely encapsulates many of the concerns surrounding react.
 
 ## Table of Contents
 
 1. [Naming](#naming)
-1. [Declaration](#declaration)
 1. [Alignment](#alignment)
 1. [Quotes](#quotes)
 1. [Spacing](#spacing)
@@ -29,8 +28,7 @@ Note: This guide is a jumping off point but certain parts of it are currently ou
 
 ## Naming
 
-- **Extensions**: Use `.jsx` extension for React components. eslint: [`react/jsx-filename-extension`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md)
-- **Filename**: Use PascalCase for filenames. E.g., `ReservationCard.jsx`.
+- **Filename**: Use PascalCase for filenames. E.g., `ReservationCard.js`.
 - **Reference Naming**: Use PascalCase for React components and camelCase for their instances. eslint: [`react/jsx-pascal-case`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md)
 
   ```jsx
@@ -47,7 +45,7 @@ Note: This guide is a jumping off point but certain parts of it are currently ou
   const reservationItem = <ReservationCard />;
   ```
 
-- **Component Naming**: Use the filename as the component name. For example, `ReservationCard.jsx` should have a reference name of `ReservationCard`. However, for root components of a directory, use `index.jsx` as the filename and use the directory name as the component name:
+- **Component Naming**: Use the filename as the component name. For example, `ReservationCard.js` should have a reference name of `ReservationCard`. However, for root components of a directory, use `index.js` as the filename and use the directory name as the component name:
 
   ```jsx
   // bad
@@ -503,74 +501,6 @@ Filter out unnecessary props when possible. Also, use [prop-types-exact](https:/
   }
   ```
 
-- Bind event handlers for the render method in the constructor. eslint: [`react/jsx-no-bind`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md)
-
-  > Why? A bind call in the render path creates a brand new function on every single render. Do not use arrow functions in class fields, because it makes them [challenging to test and debug, and can negatively impact performance](https://medium.com/@charpeni/arrow-functions-in-class-properties-might-not-be-as-great-as-we-think-3b3551c440b1), and because conceptually, class fields are for data, not logic.
-
-  ```jsx
-  // bad
-  class extends React.Component {
-    onClickDiv() {
-      // do stuff
-    }
-
-    render() {
-      return <div onClick={this.onClickDiv.bind(this)} />;
-    }
-  }
-
-  // very bad
-  class extends React.Component {
-    onClickDiv = () => {
-      // do stuff
-    }
-
-    render() {
-      return <div onClick={this.onClickDiv} />
-    }
-  }
-
-  // good
-  class extends React.Component {
-    constructor(props) {
-      super(props);
-
-      this.onClickDiv = this.onClickDiv.bind(this);
-    }
-
-    onClickDiv() {
-      // do stuff
-    }
-
-    render() {
-      return <div onClick={this.onClickDiv} />;
-    }
-  }
-  ```
-
-- Do not use underscore prefix for internal methods of a React component.
-  > Why? Underscore prefixes are sometimes used as a convention in other languages to denote privacy. But, unlike those languages, there is no native support for privacy in JavaScript, everything is public. Regardless of your intentions, adding underscore prefixes to your properties does not actually make them private, and any property (underscore-prefixed or not) should be treated as being public. See issues [#1024](https://github.com/airbnb/javascript/issues/1024), and [#490](https://github.com/airbnb/javascript/issues/490) for a more in-depth discussion.
-
-  ```jsx
-  // bad
-  React.createClass({
-    _onClickSubmit() {
-      // do stuff
-    },
-
-    // other stuff
-  });
-
-  // good
-  class extends React.Component {
-    onClickSubmit() {
-      // do stuff
-    }
-
-    // other stuff
-  }
-  ```
-
 - Be sure to return a value in your `render` methods. eslint: [`react/require-render-return`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md)
 
   ```jsx
@@ -583,9 +513,4 @@ Filter out unnecessary props when possible. Also, use [prop-types-exact](https:/
   render() {
     return (<div />);
   }
-  ```
-
-
-
-##Todo
-Extensions: Use .jsx extension for React components. eslint: react/jsx-filename-extension
+ ```
