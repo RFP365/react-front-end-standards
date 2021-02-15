@@ -13,6 +13,7 @@ render(
     <Container column>
         <Button>This is a regular button.</Button>
         <Button primary>This is a primary button.</Button>
+        <StyleDrawer className = {clsx({ active: isOpen })} />
     </Container>
 )
 
@@ -28,11 +29,11 @@ const Container = styled.div(props => ({
 
 const StyleDrawer = styled(Drawer)`
   width: ${variable.FULL}px;
-  &.drawer-open {
+  &.active {
     width: ${variable.FULL}px;
     background-color: ${({theme}) => theme.palette.gray.light};  
     }
-  &.drawer-closed {
+  &.not-active {
     width: ${variable.MIN}px;
     background-color: ${({theme}) => theme.palette.gray.dark};  
     overflow-x: hidden;
@@ -45,7 +46,6 @@ const StyleDrawer = styled(Drawer)`
 - General Naming: Use Descriptive PascalCase Naming(EG: `BigButton`, `TopContent`). 
 - When styling a root component use `Styled[RootComponent]` to avoid naming conflicts.
 - Wrapping ThirdParty Components. Preface with Styled. IE. `Styled[ThirdPartyComponent]`
-
 
 ````jsx
 const MainContent = styled.div`
@@ -60,11 +60,11 @@ When appropriate, add a post-fix to denote SubClassing of Component Styles.
 
 ```jsx
 const MainContentBody = styled.div`
-    /*Body Styles*/
+    /* Body Styles */
 `
 
 const MainContentTop = styled.div`
-    //Top Styles
+    /* Top Styles */
 `
 ```
 
@@ -83,19 +83,22 @@ const BigButton = styled(Button)`
 2) Create new Extended Components
 ````jsx
 const BugButtonOutlined = styled(BigButton)`
-    //Include Only Overwritting Styles
+    /* Include Only Overwritting Styles */
 }`
 
 ````
 
 ### Representing State
-When toggling styles, create an `is` modified state variable.
-Target state by using a nested `&.isVariable` to overwrite styles.
+When toggling styles, create an `is` modified state variable. Such as `isActive`.
+Target state by using a nested `&.active` or snake-case to overwrite styles.
 ````jsx
 const BigButton = styled(Button)`
-        //Original Styles
-    &.isOpen {
-        //Toggled State Styles
+        /* Original Styles */
+    &.open {
+        /* Toggled State Styles */
+    }
+    &.is-closed {
+        /* Toggled State Styles */
     }`
 ````
 
