@@ -1,9 +1,10 @@
 # Simple React Component Example
 
-Below is a simple react component. Notice that it is laid out with higher context up top and lower context below.
+ Below is a simple react component. Notice that it is laid out with higher context up top and lower context below.
 Borrowed from Vue.js, this layout keeps the 'component' at a glance. 
 Complexity should be abstracted to helper methods/components and lifted out and put under the component.
 Styles are abstracted to the very bottom and de-coupled from logic as much as possible.
+---
 
 ````jsx
 import React from 'react';
@@ -103,7 +104,7 @@ JS Methods and React Components specifically should have some level of JSDOC doc
 ### Returns
 - Return JSX in only one location. If your element has a blank or invalid return. Use `null`.
 
-### Guidelines ([See React Guidelines](../standards/react.md))
+### Guidelines 
 ## Common Usages
 * useState: Hook used to store component state. (See: [useState Documentation](https://reactjs.org/docs/hooks-state.html))
 * useEffect: Hook used to handle lifecycle changes. (OnSetup, OnChange, onUpdate ect.) (See: [useEffect Documentation](https://reactjs.org/docs/hooks-effect.html))
@@ -112,9 +113,11 @@ JS Methods and React Components specifically should have some level of JSDOC doc
 * Is required documentation and helps enforcement by React of incoming prop types.
 * Complicated incoming props should receive `Shape`  Objects
 
-## Javascript/Functionality ([See JS Guidelines](../standards/js.md))
 
-## Styling ([See CSS Guidelines](../standards/css.md))
+### Related Style Guides
+- React [See React Guidelines](../standards/react.md)
+- Javascript/Functionality  [See JS Guidelines](../standards/js.md)
+- Styling [See CSS Guidelines](../standards/css.md)
 
 
 

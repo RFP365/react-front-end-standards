@@ -10,8 +10,10 @@ Here is an example of an Nx Component Lib.
     |   ├── FirstComponent.js           
     |   ├── FirstComponent.spec.js      
     |   ├── FirstComponent.stories.js
-    ├── constants                       # [PascalCase].js 
-    |   ├── docType.constant.js   
+    ├── constants                       # [object].[constant].js
+    |   ├── docType.constant.js
+    ├── prop-types                      # [object].[propTypeShape].js
+    |   ├── customer.propTypeShape.js   
     ├── containers                      # [PascalCase].js 
     |   ├── MainComponentContainer.js   
     ├── contexts                        # [PascalCase].js   
@@ -31,9 +33,12 @@ Here is an example of an Nx Component Lib.
 ### components (See: [Component Example](../examples/component.md))
 * Components used by the feature.
 * Broken out by feature > sub-components. 
-### constants
+### constants (See: [Constant Example](../examples/constant.md))
 * Feature specific constants.
-* Candidates to elevate to global `libs > models`.
+* Candidates to elevate to global `libs > models > constants`.
+### prop-types (See: [Shape Example](../examples/shape.md))
+* Feature specific PropTypeShapes.
+* Candidates to elevate to global `libs > models > prop-types`.
 ### containers
 * Generally provide a data-retrieval layer to promote more functional design.
 * [Tutorial on Containers](https://scotch.io/courses/5-essential-react-concepts-to-know-before-learning-redux/presentational-and-container-component-pattern-in-react)
@@ -43,7 +48,7 @@ Here is an example of an Nx Component Lib.
 ### services (See: [Service Example](../examples/service.md))
 * Service files hold logic related to API calls.
 * Candidates to elevate to global `libs > common-services`.
-### utils
+### utils (See: [Hook Example](../examples/hook.md))
 * Util files such as `*.hooks.js` & `*.utils.js` house state hooks and component util functions.
 * Candidates to elevate to global `libs > common-util`.
 

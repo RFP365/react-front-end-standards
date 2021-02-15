@@ -1,7 +1,8 @@
-# ContextExample
+# React Context Example
 
 Context is primarily used when some data needs to be accessible by many components at different nesting levels. 
 Apply it sparingly because it makes component re-use more difficult.
+---
 
 ````jsx
 import React, {createContext, useContext, useState, useEffect, useRef} from 'react';
