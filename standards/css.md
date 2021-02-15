@@ -1,4 +1,5 @@
-# StyleSheet Guidelines
+# CSS Guidelines
+
 > We currently use Emotion(Styled Components) to style our React Components. Those are typically laid out within the javascript and not externalized. A file with too many lines, styles, or components is a good candidate for refactor.
 
 Additional Info: [Emotion Documentation](https://emotion.sh/docs/styled)

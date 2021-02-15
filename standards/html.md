@@ -1,15 +1,14 @@
 # HTML Guidelines
-> Through React, we typically deliver HTML in JSX form. Some manual HTML may exist outside of our default front-end stack.
-
+> Through React, we typically deliver HTML in JSX form. Some manual HTML may exist outside of our default front-end stack. 
 
 https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started
 ## Attributes
+See [CSS Guidelines](./css.md) for examples using Styled Components.
 ```html
 <div id="parent-component" >
     <span class="CSS-Selector"> Content </span>
     <button data-btn-id="3"> Click Me. </button>
 </div>
-
 ```
 ### id
 - Historically used for `.js` hooks & `.css` selectors.

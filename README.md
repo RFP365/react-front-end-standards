@@ -1,7 +1,7 @@
 # RFP360 Front-end Coding Standards
 ## Table of Contents
 
-1. [File Structure](/standards/files.md)
+1. [File &amp; Folder Structure Guidelines](/standards/files.md)
 1. [HTML Guidelines](/standards/html.md)
 1. [CSS Guidelines](/standards/css.md)
 1. [Javascript Best Practices](/standards/js.md)
@@ -21,3 +21,9 @@ Included are standards that we've reviewed as an organization and agree to adher
 * Understand and follow the standards outlined in this document.
 * Write code knowing that someone else might be maintaining it.
 * Be looking for ways to improve/evolve our standards.
+
+### Areas of Interest
+* A few jest examples
+* A few material-UI styling examples
+* Example for shaping/mocks.
+* Resolving outstanding standards questions.
