@@ -5,7 +5,7 @@ Apply it sparingly because it makes component re-use more difficult.
 ---
 
 ````jsx
-import React, {createContext, useContext, useState, useEffect, useRef} from 'react';
+import React, {createContext, useContext, useState} from 'react';
 
 import {ProductType} from '@rfp360-web/models';
 import {storeItem, retrieveItem} from '@rfp360-web/common-services';
