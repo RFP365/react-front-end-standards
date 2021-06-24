@@ -6,6 +6,11 @@ Nx is a versatile tool that helps with things such as:
 - Developer workflow
 - Deployment flexibility
 
+These guidelines are based off of their best practices and general use cases, as well as some of our own design decisions.
+
+[Nx at Enterprises](https://nx.dev/latest/angular/guides/monorepo-nx-enterprise)
+[Nx Libraries](https://nx.dev/latest/angular/structure/library-types)
+
 ## Apps
 
 Apps handle dependency injection and wire up libraries. They should only ever contain high level components that are specific to the use case for that app specifically. Apps shouldn't import heavily from other Nx libraries - feature libraries should ideally build out a single component that will be brought into an application.
