@@ -6,7 +6,7 @@
 1. [CSS Guidelines](/standards/css.md)
 1. [Javascript Best Practices](/standards/js.md)
 1. [React](/standards/react.md)
-1. [Nx](/standards/nx.md) (Needs Love)
+1. [Nx](/standards/nx.md)
 
 ## Provided Examples
 1. [React Component](/examples/component.md)
