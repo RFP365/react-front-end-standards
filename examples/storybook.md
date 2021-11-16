@@ -1,6 +1,6 @@
 # Storybook Stories Example
 
-Storybook is an open source tool for building UI components and pages in isolation. 
+`Storybook` is an open source tool for building UI components and pages in isolation. 
 It streamlines UI development, testing, and documentation.
 
 A story is defined alongside it's mocked component. 
@@ -77,7 +77,37 @@ To run the `storybook` instance for a library/App
 nx storybook {project-name}
 ````
 
+## Mocking an Endpoint
+We utilize `Mock Service Worker`(msw). 
+>Mock by intercepting requests on the network level. Seamlessly reuse the same mock definition for testing, development, and debugging.
+
+###Creating a Mock
+Open the `libs/test-utils/src/lib/mocks/handlers.js` file. In this file, there is an exported `const handler` array which has entries that mock rest endpoints like this:
+
+```js
+export const handlers = [
+  // ... other handlers
+  rest.get('/account/active-company', (req, res, ctx) => {
+    return res(ctx.status(200), ctx.json(complexCompany));
+  }),
+  // ... other handlers
+];
+```
+
+Each of the entries provides a mock response for the configured endpoint. When storybook is ran and a component makes a request to this endpoint, the given response is returned.
+To add another mocked endpoint, add an entry with the given HTTP verb (GET, POST, etc), and provide it the data you would like returned.
+
+Note: Add the mock lib(common-util) to `nx.json` > `implicitDependencies` for your lib.
+You will also need to register the mocks to start up in your `.storybook/preview.js`
+```js
+if (typeof global.process === 'undefined') {
+    const {worker} = require('../../test-utils/src/lib/mocks');
+    worker.start();
+}
+```
+
 ## Additional Resources
 * [Storybook Based development tutorial](https://storybook.js.org/tutorials/intro-to-storybook/react/en/get-started/)
 * [Writing Stories Documentation](https://storybook.js.org/docs/react/writing-stories/introduction)
+* [Mock Service Worker Documentation/Examples](https://mswjs.io/examples/)
 * See `rfp360-web` > `common-ui` stories for further examples.
