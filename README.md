@@ -28,5 +28,4 @@ Included are standards that we've reviewed as an organization and agree to adher
 ### Areas of Interest
 * A few jest examples
 * A few material-UI styling examples
-* Example for mocks.
 * Resolving outstanding standards questions.

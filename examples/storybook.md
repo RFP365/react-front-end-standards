@@ -103,7 +103,7 @@ nx g storybook-configuration --project {project-name}
 
 
 ## Mocking an Endpoint
-If you need to mock and endpoint for prototyping or testing, we utilize `Mock Service Worker`(msw). 
+If your component uses a service hook and needs to mock and endpoint for prototyping or testing, we utilize `Mock Service Worker`(msw). 
 >Mock by intercepting requests on the network level. Seamlessly reuse the same mock definition for testing, development, and debugging.
 
 ###Creating a Mock
