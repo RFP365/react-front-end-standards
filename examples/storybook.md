@@ -8,11 +8,32 @@ Start with the smallest piece and create a story early (or first) to prototype i
 Work your way up to larger and larger components.
 ---
 
-> Component:`exampleComponent.js` / Story:`exampleComponent.stories.js`
+## Prototyping with Storybook in a nutshell.
+
+1. Break off the smallest piece of UX/UI you are working on. Define the props it will take.
+> Component:`exampleComponent.js` 
+```jsx
+/**
+ * @param prop1
+ * @param prop2
+ */
+export const ExampleComponent = ({prop1, prop2}) => {
+        return (
+            <></>
+        );
+    };
+
+ExampleComponent.propTypes = {};
+```
+
+
+2. Define a story file alongside of it.
+> Story:`exampleComponent.stories.js`
 
 ```jsx
 /**
  * Define a Component and Title. argTypes expose helpful testing controls in Storybook.
+ * Create templates and attach args or define standalone stories.
  */
 export default {
     component: ExampleComponent,
@@ -39,6 +60,7 @@ export default {
 }
 
 /**
+ * Template Method
  * 1. Create one or multiple "core" templates.
  * 2. Bind a Story and then add testing args to it.
  */
@@ -66,19 +88,22 @@ export const WithAvatar = () => (
 );
 ```
 
+3. To run the `storybook` instance for a library/App
+````
+nx storybook {project-name}
+````
+4. Now you can prototype/test your component in isolation through it's functional props.
+
+### Storybook Setup Note
 To generate the config and add storybook support to a new Nx App/Lib.
 This will create a `.storybook` directory in the project with the required setup for storybook.
 ````
 nx g storybook-configuration --project {project-name}
 ````
 
-To run the `storybook` instance for a library/App
-````
-nx storybook {project-name}
-````
 
 ## Mocking an Endpoint
-We utilize `Mock Service Worker`(msw). 
+If you need to mock and endpoint for prototyping or testing, we utilize `Mock Service Worker`(msw). 
 >Mock by intercepting requests on the network level. Seamlessly reuse the same mock definition for testing, development, and debugging.
 
 ###Creating a Mock
