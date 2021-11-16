@@ -6,6 +6,7 @@ It streamlines UI development, testing, and documentation.
 A story is defined alongside it's mocked component. 
 Start with the smallest piece and create a story early (or first) to prototype it.
 Work your way up to larger and larger components.
+
 ---
 
 ## Prototyping with Storybook in a nutshell.
