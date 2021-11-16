@@ -19,10 +19,10 @@ Work your way up to larger and larger components.
  * @param prop2
  */
 export const ExampleComponent = ({prop1, prop2}) => {
-        return (
-            <></>
-        );
-    };
+    return (
+        <StyledExampleComponent></StyledExampleComponent>
+    );
+};
 
 ExampleComponent.propTypes = {};
 ```
