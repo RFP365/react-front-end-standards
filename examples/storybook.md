@@ -123,7 +123,7 @@ export const handlers = [
 Each of the entries provides a mock response for the configured endpoint. When storybook is ran and a component makes a request to this endpoint, the given response is returned.
 To add another mocked endpoint, add an entry with the given HTTP verb (GET, POST, etc), and provide it the data you would like returned.
 
-Note: Add the mock lib(common-util) to `nx.json` > `implicitDependencies` for your lib.
+Note: You will need to add `projects.{library-name}.architect.storybook.staticDir = ["public"]` to workspace.json if it doesn't contain it.
 You will also need to register the mocks to start up in your `.storybook/preview.js`
 ```js
 if (typeof global.process === 'undefined') {
