@@ -4,6 +4,7 @@
 Borrowed from Vue.js, this layout keeps the 'component' at a glance. 
 Complexity should be abstracted to helper methods/components and lifted out and put under the component.
 Styles are abstracted to the very bottom and de-coupled from logic as much as possible.
+
 ---
 
 ````jsx
@@ -68,7 +69,6 @@ width: 100%;
 margin-bottom: ${({ theme }) => theme.spacing(3)}px;
 `;
 
-export default AuthFailureAlert;
 ````
 
 ## Imports
